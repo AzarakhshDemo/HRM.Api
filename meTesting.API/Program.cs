@@ -2,7 +2,6 @@ using MediatR;
 using meTesting.Bus.SDK;
 using meTesting.Chart;
 using meTesting.Personnel;
-using meTesting.LetterSrv;
 using meTesting.TransactionIdGenerator;
 using meTesting.HRM.API;
 using meTesting.HRM.AtrributeService;
@@ -44,7 +43,6 @@ builder.Services.AddMediatR(a => a.RegisterServicesFromAssembly(typeof(Program).
 builder.Services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ExceptionHandlingBehavior<,>));
 
 builder.Services.AddPersonelService();
-builder.Services.AddLetterService();
 builder.Services.AddChartService();
 builder.Services.AddPersonelAttrributeService();
 builder.Services.AddEvaluationService();
