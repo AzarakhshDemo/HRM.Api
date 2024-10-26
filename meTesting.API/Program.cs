@@ -49,7 +49,7 @@ builder.Services.AddEvaluationService();
 
 builder.Services.AddServiceBus(a =>
 {
-    a.BaseUrl = envConf.Url; // "http://localhost:5106";
+    a.BaseUrl = "https://localhost:7134"; // "http://localhost:5106";
     a.Key = envConf.AppKey;  // "HRM_API";
 }, a => new HRMHandler(a, a.GetRequiredService<ILogger<HRMHandler>>()));
 
